@@ -2,6 +2,8 @@
 
 A US QWERTY keyboard layout for programmers with Czech characters on AltGr.
 
+Czech version: [README.cs.md](./README.cs.md)
+
 Repository:
 
 ```text
@@ -119,7 +121,7 @@ Without flakes:
 nix-shell
 ```
 
-The dev shell contains `xkbcomp`, `setxkbmap`, `shellcheck`, `nixfmt-rfc-style`, and common shell tools.
+The dev shell contains `xkbcomp`, `setxkbmap`, `shellcheck`, `nixfmt`, and common shell tools.
 
 ## Self-tests
 

@@ -1,34 +1,34 @@
-# NixOS installation
+# Instalace na NixOS
 
-This repository provides both a Nix package and a NixOS module for the `us-cz-altgr-programmer` XKB layout.
+Tento repozitář poskytuje Nix balíček i NixOS modul pro XKB rozložení `us-cz-altgr-programmer`.
 
-Czech version: [README-NixOS.cs.md](./README-NixOS.cs.md)
+Anglická verze: [README-NixOS.md](./README-NixOS.md)
 
-## Remote package build
+## Vzdálené sestavení balíčku
 
-The package can be built directly from GitHub:
+Balíček lze sestavit přímo z GitHubu:
 
 ```bash
 nix build github:cniry/keyboard-us-cz-altgr-programmer
 ```
 
-This installs the XKB symbols file into the package output under:
+Tím se XKB symbols soubor nainstaluje do výstupu balíčku sem:
 
 ```text
 share/X11/xkb/symbols/us-cz-altgr-programmer
 ```
 
-For a working NixOS keyboard layout, prefer the NixOS module. The module registers the package output through `services.xserver.xkb.extraLayouts`.
+Pro funkční rozložení klávesnice na NixOS je lepší použít NixOS modul. Modul zaregistruje výstup balíčku přes `services.xserver.xkb.extraLayouts`.
 
-## Recommended usage with flakes
+## Doporučené použití s flaky
 
-In your system `flake.nix`, add the keyboard layout as an input:
+Do systémového `flake.nix` přidejte rozložení klávesnice jako vstup:
 
 ```nix
 inputs.keyboard-us-cz-altgr-programmer.url = "github:cniry/keyboard-us-cz-altgr-programmer";
 ```
 
-Then add the exported NixOS module to your system modules:
+Potom přidejte exportovaný NixOS modul mezi systémové moduly:
 
 ```nix
 modules = [
@@ -37,7 +37,7 @@ modules = [
 ];
 ```
 
-In your `configuration.nix`, select the layout:
+V `configuration.nix` vyberte rozložení:
 
 ```nix
 services.xserver.xkb = {
@@ -47,15 +47,15 @@ services.xserver.xkb = {
 };
 ```
 
-Rebuild:
+Přestavte systém:
 
 ```bash
 sudo nixos-rebuild switch --flake /etc/nixos#pavel-omen
 ```
 
-Then log out and log back in.
+Potom se odhlaste a znovu přihlaste.
 
-## Complete flake example
+## Kompletní příklad flaku
 
 ```nix
 {
@@ -88,15 +88,15 @@ Then log out and log back in.
 }
 ```
 
-## Usage without flakes
+## Použití bez flaku
 
-Clone this repository to:
+Naklonujte tento repozitář do:
 
 ```text
 /etc/nixos/keyboard/keyboard-us-cz-altgr-programmer
 ```
 
-Example:
+Příklad:
 
 ```bash
 sudo mkdir -p /etc/nixos/keyboard
@@ -104,7 +104,7 @@ cd /etc/nixos/keyboard
 sudo git clone https://github.com/cniry/keyboard-us-cz-altgr-programmer.git keyboard-us-cz-altgr-programmer
 ```
 
-Then import the module in `/etc/nixos/configuration.nix`:
+Potom importujte modul v `/etc/nixos/configuration.nix`:
 
 ```nix
 {
@@ -121,19 +121,19 @@ Then import the module in `/etc/nixos/configuration.nix`:
 }
 ```
 
-Run:
+Spusťte:
 
 ```bash
 sudo nixos-rebuild switch
 ```
 
-Then log out and log back in.
+Potom se odhlaste a znovu přihlaste.
 
-## GNOME on Wayland
+## GNOME na Waylandu
 
-GNOME on Wayland keeps its own user input source list in dconf. If GNOME still shows the old keyboards after a reboot, set the input source through Home Manager.
+GNOME na Waylandu si drží vlastní seznam uživatelských vstupních zdrojů v dconf. Pokud GNOME po restartu stále zobrazuje staré klávesnice, nastavte vstupní zdroj přes Home Manager.
 
-Add this to your Home Manager user config:
+Do uživatelské konfigurace Home Manageru přidejte:
 
 ```nix
 { pkgs, lib, ... }:
@@ -155,9 +155,9 @@ Add this to your Home Manager user config:
 }
 ```
 
-Then rebuild and log out/log back in.
+Potom systém přestavte a odhlaste se / znovu přihlaste.
 
-## Updating only this keyboard flake input
+## Aktualizace pouze tohoto keyboard flake vstupu
 
 ```bash
 cd /etc/nixos
@@ -165,31 +165,31 @@ sudo nix flake lock --update-input keyboard-us-cz-altgr-programmer
 sudo nixos-rebuild switch --flake /etc/nixos#pavel-omen
 ```
 
-## Self-tests
+## Self-testy
 
-From a checkout of this repository:
+Z checkoutu tohoto repozitáře:
 
 ```bash
 nix develop
 ./tests/run-self-tests.sh
 ```
 
-Or directly:
+Nebo přímo:
 
 ```bash
 nix flake check
 ```
 
-## Verification
+## Ověření
 
-Check GNOME input sources:
+Zkontrolujte vstupní zdroje GNOME:
 
 ```bash
 gsettings get org.gnome.desktop.input-sources sources
 gsettings get org.gnome.desktop.input-sources xkb-options
 ```
 
-Expected values include:
+Očekávané hodnoty obsahují:
 
 ```text
 [('xkb', 'us-cz-altgr-programmer')]

@@ -2,6 +2,8 @@
 
 Ubuntu and Linux Mint can use this layout too. The layout itself is a regular XKB symbols file, so it is not NixOS-specific.
 
+Czech version: [README-Ubuntu-Mint.cs.md](./README-Ubuntu-Mint.cs.md)
+
 ## Install the symbols file
 
 From the repository root:
