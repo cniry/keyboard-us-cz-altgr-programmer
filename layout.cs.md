@@ -1,14 +1,14 @@
 # US-CZ AltGr Programmer Keyboard Layout
 
-Base layout: US QWERTY.
+Základní rozložení: US QWERTY.
 
-Czech version: [layout.cs.md](./layout.cs.md)
+Anglická verze: [layout.md](./layout.md)
 
-Czech characters are available through AltGr while normal programming characters stay on their usual US positions.
+České znaky jsou dostupné přes AltGr, zatímco běžné programátorské znaky zůstávají na svých obvyklých US pozicích.
 
-## Top row, Czech keyboard muscle memory
+## Horní řada, svalová paměť z české klávesnice
 
-| Shortcut | Output | Shortcut | Output |
+| Zkratka | Výstup | Zkratka | Výstup |
 |---|---:|---|---:|
 | AltGr + 2 | ě | AltGr + Shift + 2 | Ě |
 | AltGr + 3 | š | AltGr + Shift + 3 | Š |
@@ -23,9 +23,9 @@ Czech characters are available through AltGr while normal programming characters
 | AltGr + ; | ů | AltGr + Shift + ; | Ů |
 | AltGr + \\ | ň | AltGr + Shift + \\ | Ň |
 
-## Mnemonic letter layer
+## Mnemotechnická vrstva písmen
 
-| Shortcut | Output | Shortcut | Output |
+| Zkratka | Výstup | Zkratka | Výstup |
 |---|---:|---|---:|
 | AltGr + w | ě | AltGr + Shift + w | Ě |
 | AltGr + c | č | AltGr + Shift + c | Č |
@@ -42,9 +42,9 @@ Czech characters are available through AltGr while normal programming characters
 | AltGr + t | ť | AltGr + Shift + t | Ť |
 | AltGr + n | ň | AltGr + Shift + n | Ň |
 
-## Extra symbols
+## Další symboly
 
-| Shortcut | Output |
+| Zkratka | Výstup |
 |---|---:|
 | AltGr + Shift + e | € |
 | AltGr + Shift + ` | ° |

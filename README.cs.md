@@ -35,7 +35,7 @@ Viz [CHANGELOG.md](./CHANGELOG.md).
 
 ## Rozložení
 
-Viz [layout.md](./layout.md).
+Viz [layout.cs.md](./layout.cs.md).
 
 Důležité příklady:
 
