@@ -96,7 +96,10 @@ nix flake show github:cniry/keyboard-us-cz-altgr-programmer
 Use as a NixOS flake input:
 
 ```nix
-inputs.keyboard-us-cz-altgr-programmer.url = "github:cniry/keyboard-us-cz-altgr-programmer";
+inputs.keyboard-us-cz-altgr-programmer = {
+  url = "github:cniry/keyboard-us-cz-altgr-programmer";
+  inputs.nixpkgs.follows = "nixpkgs";
+};
 ```
 
 Then import the module:

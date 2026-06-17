@@ -25,7 +25,10 @@ For a working NixOS keyboard layout, prefer the NixOS module. The module registe
 In your system `flake.nix`, add the keyboard layout as an input:
 
 ```nix
-inputs.keyboard-us-cz-altgr-programmer.url = "github:cniry/keyboard-us-cz-altgr-programmer";
+inputs.keyboard-us-cz-altgr-programmer = {
+  url = "github:cniry/keyboard-us-cz-altgr-programmer";
+  inputs.nixpkgs.follows = "nixpkgs";
+};
 ```
 
 Then add the exported NixOS module to your system modules:
@@ -67,7 +70,10 @@ Then log out and log back in.
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    keyboard-us-cz-altgr-programmer.url = "github:cniry/keyboard-us-cz-altgr-programmer";
+    keyboard-us-cz-altgr-programmer = {
+      url = "github:cniry/keyboard-us-cz-altgr-programmer";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs@{ nixpkgs, home-manager, keyboard-us-cz-altgr-programmer, ... }: {

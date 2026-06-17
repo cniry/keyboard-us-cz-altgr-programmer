@@ -25,7 +25,10 @@ Pro funkční rozložení klávesnice na NixOS je lepší použít NixOS modul. 
 Do systémového `flake.nix` přidejte rozložení klávesnice jako vstup:
 
 ```nix
-inputs.keyboard-us-cz-altgr-programmer.url = "github:cniry/keyboard-us-cz-altgr-programmer";
+inputs.keyboard-us-cz-altgr-programmer = {
+  url = "github:cniry/keyboard-us-cz-altgr-programmer";
+  inputs.nixpkgs.follows = "nixpkgs";
+};
 ```
 
 Potom přidejte exportovaný NixOS modul mezi systémové moduly:
@@ -67,7 +70,10 @@ Potom se odhlaste a znovu přihlaste.
       inputs.nixpkgs.follows = "nixpkgs";
     };
 
-    keyboard-us-cz-altgr-programmer.url = "github:cniry/keyboard-us-cz-altgr-programmer";
+    keyboard-us-cz-altgr-programmer = {
+      url = "github:cniry/keyboard-us-cz-altgr-programmer";
+      inputs.nixpkgs.follows = "nixpkgs";
+    };
   };
 
   outputs = inputs@{ nixpkgs, home-manager, keyboard-us-cz-altgr-programmer, ... }: {
