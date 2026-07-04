@@ -31,7 +31,7 @@ Czech characters are available through AltGr while normal programming characters
 | AltGr + r | ř | AltGr + Shift + r | Ř |
 | AltGr + z | ž | AltGr + Shift + z | Ž |
 | AltGr + y | ý | AltGr + Shift + y | Ý |
-| AltGr + e | é | AltGr + Shift + e | € |
+| AltGr + e | é | AltGr + Shift + e | É |
 | AltGr + a | á | AltGr + Shift + a | Á |
 | AltGr + i | í | AltGr + Shift + i | Í |
 | AltGr + u | ú | AltGr + Shift + u | Ú |
@@ -40,9 +40,4 @@ Czech characters are available through AltGr while normal programming characters
 | AltGr + t | ť | AltGr + Shift + t | Ť |
 | AltGr + n | ň | AltGr + Shift + n | Ň |
 
-## Extra symbols
-
-| Shortcut | Output |
-|---|---:|
-| AltGr + Shift + e | € |
-| AltGr + Shift + ` | ° |
+Shift on the AltGr layer is reserved for uppercase letters.

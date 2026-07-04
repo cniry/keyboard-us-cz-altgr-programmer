@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.3
+
+- Reserve Shift on the AltGr layer for uppercase Czech letters.
+- Remove extra AltGr+Shift symbol mappings for euro and degree.
+
 ## 1.0.2
 
 - Add remote GitHub flake/package usage documentation.

@@ -59,8 +59,7 @@ AltGr + 4 = č
 AltGr + 5 = ř
 AltGr + ; = ů
 AltGr + \\ = ň
-AltGr + Shift + e = €
-AltGr + Shift + ` = °
+AltGr + Shift + e = É
 ```
 
 ## Self-testy
