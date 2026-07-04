@@ -2,7 +2,7 @@
 
 stdenvNoCC.mkDerivation {
   pname = "us-cz-altgr-programmer-xkb";
-  version = "1.0.5";
+  version = "1.0.6";
 
   src = ../.;
 

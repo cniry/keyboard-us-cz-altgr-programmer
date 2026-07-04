@@ -8,8 +8,6 @@ Technical names:
 
 ```text
 XKB layout ID:  us-cz-altgr-programmer
-Nix package:    us-cz-altgr-programmer-xkb
-Flake input:    keyboard-us-cz-altgr-programmer
 ```
 
 ## Goals
@@ -19,8 +17,7 @@ Flake input:    keyboard-us-cz-altgr-programmer
 - Preserve part of Czech keyboard muscle memory on the number row.
 - Avoid Ctrl+AltGr combinations so applications do not treat them as shortcuts.
 - Work on NixOS, Ubuntu, Linux Mint, X11, and GNOME/Wayland with the right desktop configuration.
-- Be installable remotely from GitHub as a Nix flake package and NixOS module.
-- Include self-tests for the layout, package metadata, and XKB syntax.
+- Include self-tests for the layout and XKB syntax.
 
 ## Layout
 
@@ -44,87 +41,12 @@ AltGr + ` = °
 - [NixOS installation](./docs/README-NixOS.md)
 - [Ubuntu / Linux Mint installation](./docs/README-Ubuntu-Mint.md)
 
-## Nix flake outputs
-
-This repository exports:
-
-```text
-packages.x86_64-linux.default
-packages.x86_64-linux.us-cz-altgr-programmer-xkb
-packages.aarch64-linux.default
-packages.aarch64-linux.us-cz-altgr-programmer-xkb
-nixosModules.default
-nixosModules.us-cz-altgr-programmer
-devShells.x86_64-linux.default
-devShells.aarch64-linux.default
-checks.*.package
-checks.*.self-tests
-```
-
-## Remote Nix usage from GitHub
-
-Build the package directly from GitHub:
-
-```bash
-nix build github:cniry/keyboard-us-cz-altgr-programmer
-```
-
-Install the package into a profile, if you only want the files available in a Nix profile:
-
-```bash
-nix profile install github:cniry/keyboard-us-cz-altgr-programmer
-```
-
-For actual NixOS keyboard activation, use the exported NixOS module rather than only installing the package.
-
-Show exported flake outputs:
-
-```bash
-nix flake show github:cniry/keyboard-us-cz-altgr-programmer
-```
-
-Use as a NixOS flake input:
-
-```nix
-inputs.keyboard-us-cz-altgr-programmer.url = "github:cniry/keyboard-us-cz-altgr-programmer";
-```
-
-Then import the module:
-
-```nix
-inputs.keyboard-us-cz-altgr-programmer.nixosModules.default
-```
-
-See [NixOS installation](./docs/README-NixOS.md) for a complete example.
-
-## Development shell
-
-With flakes:
-
-```bash
-nix develop
-```
-
-Without flakes:
-
-```bash
-nix-shell
-```
-
-The dev shell contains `xkbcomp`, `setxkbmap`, `shellcheck`, `nixfmt`, and common shell tools.
-
 ## Self-tests
 
-Run all self-tests in the dev shell:
+Run all self-tests:
 
 ```bash
 ./tests/run-self-tests.sh
-```
-
-Run flake checks:
-
-```bash
-nix flake check
 ```
 
 The self-tests verify:

@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.6
+
+- Move Nix-specific usage details out of the main README files.
+
 ## 1.0.5
 
 - Remove redundant standalone repository blocks from the main README files.
