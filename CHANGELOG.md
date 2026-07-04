@@ -1,5 +1,10 @@
 # Changelog
 
+## 1.0.5
+
+- Remove redundant standalone repository blocks from the main README files.
+- Remove version metadata from the main README files.
+
 ## 1.0.4
 
 - Add euro on AltGr+apostrophe and degree on AltGr+backtick.

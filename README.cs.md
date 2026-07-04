@@ -4,12 +4,6 @@ US QWERTY rozložení klávesnice pro programátory s českými znaky přes AltG
 
 Anglická verze: [README.md](./README.md)
 
-Repozitář:
-
-```text
-github.com/cniry/keyboard-us-cz-altgr-programmer
-```
-
 Technické názvy:
 
 ```text
@@ -17,11 +11,6 @@ XKB layout ID:  us-cz-altgr-programmer
 Nix package:    us-cz-altgr-programmer-xkb
 Flake input:    keyboard-us-cz-altgr-programmer
 ```
-
-Verze: `1.0.4`
-
-Pravidlo verzování: každá změna projektu zvyšuje patch verzi.
-Viz [CHANGELOG.md](./CHANGELOG.md).
 
 ## Cíle
 
@@ -143,7 +132,7 @@ Self-testy ověřují:
 - existenci požadovaných souborů,
 - konzistentní použití přejmenovaného projektu, balíčku a rozložení,
 - absenci starých názvů projektu,
-- verzi balíčku a README `1.0.4`,
+- verzi balíčku a souboru `VERSION`,
 - přítomnost důležitých mapování kláves,
 - kompilaci XKB rozložení pomocí `xkbcomp`, pokud je dostupný.
 

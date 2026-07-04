@@ -4,12 +4,6 @@ A US QWERTY keyboard layout for programmers with Czech characters on AltGr.
 
 Czech version: [README.cs.md](./README.cs.md)
 
-Repository:
-
-```text
-github.com/cniry/keyboard-us-cz-altgr-programmer
-```
-
 Technical names:
 
 ```text
@@ -17,11 +11,6 @@ XKB layout ID:  us-cz-altgr-programmer
 Nix package:    us-cz-altgr-programmer-xkb
 Flake input:    keyboard-us-cz-altgr-programmer
 ```
-
-Version: `1.0.4`
-
-Versioning policy: each project change increments the patch number.
-See [CHANGELOG.md](./CHANGELOG.md).
 
 ## Goals
 
@@ -143,7 +132,7 @@ The self-tests verify:
 - required files exist,
 - the renamed project/package/layout names are used consistently,
 - stale old project names are absent,
-- package and README version is `1.0.4`,
+- package and `VERSION` file version,
 - important key mappings are present,
 - the XKB layout compiles with `xkbcomp` when available.
 

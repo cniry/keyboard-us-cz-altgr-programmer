@@ -25,7 +25,7 @@ done
 echo "==> Checking project names"
 grep -q 'us-cz-altgr-programmer' "$SYMBOLS_FILE"
 grep -q 'us-cz-altgr-programmer-xkb' "$PACKAGE_FILE"
-grep -q 'github.com/cniry/keyboard-us-cz-altgr-programmer' "$README_FILE"
+grep -q 'XKB layout ID:  us-cz-altgr-programmer' "$README_FILE"
 
 if grep -R 'us-cz-programmer\|keyboard-us-cz-programmer' "$ROOT_DIR" \
   --exclude-dir=.git \
@@ -36,9 +36,8 @@ if grep -R 'us-cz-programmer\|keyboard-us-cz-programmer' "$ROOT_DIR" \
 fi
 
 echo "==> Checking version"
-grep -q 'version = "1.0.4"' "$PACKAGE_FILE"
-grep -q 'Version: `1.0.4`' "$README_FILE"
-grep -qx '1.0.4' "$ROOT_DIR/VERSION"
+grep -q 'version = "1.0.5"' "$PACKAGE_FILE"
+grep -qx '1.0.5' "$ROOT_DIR/VERSION"
 
 echo "==> Checking required key mappings"
 grep -q 'key <AE04>.*ccaron.*Ccaron' "$SYMBOLS_FILE"
