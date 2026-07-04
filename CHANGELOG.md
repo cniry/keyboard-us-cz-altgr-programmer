@@ -25,6 +25,6 @@
 - Add self-tests in `tests/run-self-tests.sh`.
 - Add flake checks for the package and self-tests.
 
-## 0.0.1
+## 1.0.1
 
 - Initial public version of the US-CZ AltGr Programmer Keyboard Layout.
