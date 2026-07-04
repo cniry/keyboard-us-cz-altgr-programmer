@@ -41,7 +41,9 @@ AltGr + ` = °
 - [Instalace na NixOS](./docs/README-NixOS.cs.md)
 - [Instalace na Ubuntu / Linux Mint](./docs/README-Ubuntu-Mint.cs.md)
 
-## Self-testy
+## Vývoj
+
+### Self-testy
 
 Spuštění všech self-testů:
 
@@ -58,7 +60,7 @@ Self-testy ověřují:
 - přítomnost důležitých mapování kláves,
 - kompilaci XKB rozložení pomocí `xkbcomp`, pokud je dostupný.
 
-## Rychlý test v X11
+### Rychlý test v X11
 
 Přiložený testovací skript je určený pouze pro X11 session, ne pro nativní Wayland aplikace:
 

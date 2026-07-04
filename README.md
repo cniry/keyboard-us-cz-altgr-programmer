@@ -41,7 +41,9 @@ AltGr + ` = °
 - [NixOS installation](./docs/README-NixOS.md)
 - [Ubuntu / Linux Mint installation](./docs/README-Ubuntu-Mint.md)
 
-## Self-tests
+## Development
+
+### Self-tests
 
 Run all self-tests:
 
@@ -58,7 +60,7 @@ The self-tests verify:
 - important key mappings are present,
 - the XKB layout compiles with `xkbcomp` when available.
 
-## Quick X11 test
+### Quick X11 test
 
 The included test script is only for X11 sessions, not native Wayland apps:
 
