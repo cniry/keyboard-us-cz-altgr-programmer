@@ -1,6 +1,6 @@
 # Changelog
 
-## 0.0.2
+## 1.0.2
 
 - Add remote GitHub flake/package usage documentation.
 - Add `shell.nix` for the development environment.

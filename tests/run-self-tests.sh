@@ -36,9 +36,9 @@ if grep -R 'us-cz-programmer\|keyboard-us-cz-programmer' "$ROOT_DIR" \
 fi
 
 echo "==> Checking version"
-grep -q 'version = "0.0.2"' "$PACKAGE_FILE"
-grep -q 'Version: `0.0.2`' "$README_FILE"
-grep -qx '0.0.2' "$ROOT_DIR/VERSION"
+grep -q 'version = "1.0.2"' "$PACKAGE_FILE"
+grep -q 'Version: `1.0.2`' "$README_FILE"
+grep -qx '1.0.2' "$ROOT_DIR/VERSION"
 
 echo "==> Checking required key mappings"
 grep -q 'key <AE04>.*ccaron.*Ccaron' "$SYMBOLS_FILE"
