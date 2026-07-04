@@ -40,4 +40,11 @@ Czech characters are available through AltGr while normal programming characters
 | AltGr + t | ť | AltGr + Shift + t | Ť |
 | AltGr + n | ň | AltGr + Shift + n | Ň |
 
-Shift on the AltGr layer is reserved for uppercase letters.
+## Extra symbols
+
+| Shortcut | Output |
+|---|---:|
+| AltGr + ' | € |
+| AltGr + ` | ° |
+
+Shift on the AltGr letter layer is reserved for uppercase letters.

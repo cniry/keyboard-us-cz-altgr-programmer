@@ -1,5 +1,9 @@
 # Changelog
 
+## 1.0.4
+
+- Add euro on AltGr+apostrophe and degree on AltGr+backtick.
+
 ## 1.0.3
 
 - Reserve Shift on the AltGr layer for uppercase Czech letters.

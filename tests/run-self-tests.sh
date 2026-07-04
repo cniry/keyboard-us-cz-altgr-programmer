@@ -36,9 +36,9 @@ if grep -R 'us-cz-programmer\|keyboard-us-cz-programmer' "$ROOT_DIR" \
 fi
 
 echo "==> Checking version"
-grep -q 'version = "1.0.3"' "$PACKAGE_FILE"
-grep -q 'Version: `1.0.3`' "$README_FILE"
-grep -qx '1.0.3' "$ROOT_DIR/VERSION"
+grep -q 'version = "1.0.4"' "$PACKAGE_FILE"
+grep -q 'Version: `1.0.4`' "$README_FILE"
+grep -qx '1.0.4' "$ROOT_DIR/VERSION"
 
 echo "==> Checking required key mappings"
 grep -q 'key <AE04>.*ccaron.*Ccaron' "$SYMBOLS_FILE"
@@ -46,7 +46,8 @@ grep -q 'key <AE05>.*rcaron.*Rcaron' "$SYMBOLS_FILE"
 grep -q 'key <AC10>.*uring.*Uring' "$SYMBOLS_FILE"
 grep -q 'key <BKSL>.*ncaron.*Ncaron' "$SYMBOLS_FILE"
 grep -q 'key <AD03>.*eacute.*Eacute' "$SYMBOLS_FILE"
-grep -q 'key <TLDE>.*NoSymbol.*NoSymbol' "$SYMBOLS_FILE"
+grep -q 'key <TLDE>.*degree.*NoSymbol' "$SYMBOLS_FILE"
+grep -q 'key <AC11>.*EuroSign.*NoSymbol' "$SYMBOLS_FILE"
 
 echo "==> Checking XKB syntax with xkbcomp"
 if command -v xkbcomp >/dev/null 2>&1; then

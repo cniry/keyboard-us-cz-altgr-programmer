@@ -18,7 +18,7 @@ Nix package:    us-cz-altgr-programmer-xkb
 Flake input:    keyboard-us-cz-altgr-programmer
 ```
 
-Verze: `1.0.3`
+Verze: `1.0.4`
 
 Pravidlo verzování: každá změna projektu zvyšuje patch verzi.
 Viz [CHANGELOG.md](./CHANGELOG.md).
@@ -46,6 +46,8 @@ AltGr + 5 = ř
 AltGr + ; = ů
 AltGr + \\ = ň
 AltGr + Shift + e = É
+AltGr + ' = €
+AltGr + ` = °
 ```
 
 ## Instalační návody
@@ -141,7 +143,7 @@ Self-testy ověřují:
 - existenci požadovaných souborů,
 - konzistentní použití přejmenovaného projektu, balíčku a rozložení,
 - absenci starých názvů projektu,
-- verzi balíčku a README `1.0.3`,
+- verzi balíčku a README `1.0.4`,
 - přítomnost důležitých mapování kláves,
 - kompilaci XKB rozložení pomocí `xkbcomp`, pokud je dostupný.
 

@@ -60,6 +60,8 @@ AltGr + 5 = ř
 AltGr + ; = ů
 AltGr + \\ = ň
 AltGr + Shift + e = É
+AltGr + ' = €
+AltGr + ` = °
 ```
 
 ## Self-tests
