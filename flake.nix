@@ -29,7 +29,7 @@
         let
           pkgs = import nixpkgs { inherit system; };
         in
-        pkgs.nixfmt-rfc-style
+        pkgs.nixfmt
       );
 
       devShells = forAllSystems (system:
@@ -53,14 +53,14 @@
               bash
               gnugrep
               coreutils
-              xorg.xkbcomp
+              xkbcomp
               xkeyboard_config
             ];
           } ''
             cp -r ${self} source
             chmod -R u+w source
             cd source
-            ./tests/run-self-tests.sh
+            bash ./tests/run-self-tests.sh
             touch $out
           '';
         }

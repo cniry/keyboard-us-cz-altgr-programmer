@@ -63,7 +63,7 @@ xkb_keymap {
   xkb_geometry  { include "pc(pc105)" };
 };
 XKBEOF
-  if ! xkbcomp -I"$TMP_DIR" "$TMP_DIR/test-keymap.xkb" /dev/null >"$TMP_DIR/xkbcomp.log" 2>&1; then
+  if ! xkbcomp -I"$TMP_DIR" "$TMP_DIR/test-keymap.xkb" "$TMP_DIR/compiled.xkm" >"$TMP_DIR/xkbcomp.log" 2>&1; then
     cat "$TMP_DIR/xkbcomp.log" >&2
     exit 1
   fi
