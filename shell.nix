@@ -6,10 +6,10 @@ pkgs.mkShell {
     git
     gnugrep
     coreutils
-    xorg.xkbcomp
-    xorg.setxkbmap
+    xkbcomp
+    setxkbmap
     xkeyboard_config
-    nixfmt-rfc-style
+    nixfmt
     shellcheck
   ];
 
